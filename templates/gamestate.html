@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>battler</title>
+  <script>
+    function displayNextImage() {
+        x = (x === resultloop.length - 1) ? 0 : x + 1;
+        document.getElementById("img").src = resultloop[x];
+    }
+    // function displayPreviousImage() {
+    //     x = (x <= 0) ? resultloop.length - 1 : x - 1;
+    //     document.getElementById("img").src = resultloop[x];
+    // }
+    function startTimer() {
+        setInterval(displayNextImage, 3000);
+    }
+    var resultloop = {{ resultloop|safe }}, x = -1;
+    // var resultloop = {{ resultloop|safe }};
+    console.log(resultloop)
+  </script>
+
+</head>
+
+<body onload="startTimer()">
+  <h1>GifLooping</h1>
+  <p>Here are your searchterms</p>
+  <p>{{ resultloop[-1] }}</p
+  <br>
+  <img src={{ resultloop[0] }} id="img" width="500" height="377">
+  <br>
+  <!-- <button type="button" onclick="displayPreviousImage()">Previous</button>
+  <br>
+  <button type="button" onclick="displayNextImage()">Next</button>
+  <br> -->
+  <a href="/giflooper"><input type="button" value="search again"></a>
+</body>

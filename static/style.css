@@ -1,17 +1,1 @@
-/* body {
-  font-family: arial;
-} */
-/* .hide {
-  display: none;
-} */
-/* p {
-  font-weight: bold;
-} */
 
-.content {
-  display: none;
-}
-input:checked + span,
-input:checked + input {
-  display: block;
-}

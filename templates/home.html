@@ -26,8 +26,8 @@
     <input type="radio" name="player_no" id="two-player" value="two_player"> TwoPlayer<br>
   </form>
   <p>enter your name(s)</p>
-    <form action="/name_entered" method="POST">
-      <input type="text" placeholder="PlayerOne" name="player_name">
+    <form action="/gamestate" method="POST">
+      <input type="text" placeholder="PlayerOne" name="player_one_name">
       <input type="submit" value="Enter">
       <div id="two_p" class="hide" style='display:none'>
         <input type="text" placeholder="PlayerTwo" name="player_two_name">

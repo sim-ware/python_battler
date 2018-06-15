@@ -17,6 +17,19 @@ def index():
     return render_template('home.html')
 
 
+##
+# Results Route
+###############
+@app.route('/gamestate', methods=['POST'])
+def resultloop():
+    player_one = request.form['player_one_name']
+    # player_two = request.form['player_two_name'] if request.form['player_two_name'] else player_two = 'Computer'
+    if request.form['player_two_name']:
+        player_two = request.form['player_two_name']
+    else:
+        player_two = 'Computer'
+    # 'Yes' if fruit == 'Apple' else 'No'
+    return render_template('gamestate.html', pOne=player_one, pTwo=player_two)
 # @app.route('/background_process')
 # def background_process():
 # 	try:
